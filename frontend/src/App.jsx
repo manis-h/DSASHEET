@@ -18,7 +18,7 @@ function App() {
       {!token ? (
         showRegister ? (
           <>
-            <Register setToken={setToken} />
+            <Register setToken={setToken} setShowRegister={setShowRegister} />
             <p className="text-center mt-4">
               Already have an account?{' '}
               <button className="text-blue-600 underline" onClick={() => setShowRegister(false)}>
