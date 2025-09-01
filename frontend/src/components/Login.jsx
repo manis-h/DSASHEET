@@ -6,7 +6,7 @@ export default function Login({ setToken,setShowRegister }) {
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    const res = await axios.post('http://localhost:3000/api/auth/login', { email, password });
+    const res = await axios.post('https://dsasheet-production.up.railway.app/api/auth/login', { email, password });
     setToken(res.data.token);
   };
 
