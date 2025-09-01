@@ -7,7 +7,7 @@ export default function ProgressSummary({ token,refresh }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/dsa/progress", {
+      .get("https://dsasheet-production.up.railway.app/api/dsa/progress", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
