@@ -38,5 +38,5 @@ seedData = async () => {
   // mongoose.disconnect();
 };
 
-seedData();
+// seedData();
 // module.exports = { seedData };
