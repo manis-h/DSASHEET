@@ -9,7 +9,7 @@ export default function DSASheet({ token }) {
 const [refreshKey, setRefreshKey] = useState(0);
 
   const fetchChapters = () => {
-    axios.get('http://localhost:3000/api/dsa', {
+    axios.get('https://dsasheet-production.up.railway.app/api/dsa', {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -23,7 +23,7 @@ const [refreshKey, setRefreshKey] = useState(0);
   const markComplete = async (problemId) => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/dsa/complete/${problemId}`,
+        `https://dsasheet-production.up.railway.app/api/dsa/complete/${problemId}`,
         {},
         {
           headers: {
