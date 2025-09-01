@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const DSASheet = require('./models/DSASheet');
 
-mongoose.connect('mongodb://localhost:27017/dsa-sheet');
+// mongoose.connect('mongodb://localhost:27017/dsa-sheet');
 
 const levels = ['Easy', 'Medium', 'Tough'];
 
@@ -35,7 +35,7 @@ seedData = async () => {
   await DSASheet.deleteMany({});
   await DSASheet.insertMany(chapters);
   console.log('✅ DSA Sheet data seeded');
-  mongoose.disconnect();
+  // mongoose.disconnect();
 };
 
 // seedData();
