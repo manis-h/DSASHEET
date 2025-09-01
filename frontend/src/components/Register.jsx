@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-export default function Register({ setToken }) {
+export default function Register({ setToken ,setShowRegister}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
@@ -66,7 +66,7 @@ export default function Register({ setToken }) {
 
         <p className="text-center text-gray-500 text-sm mt-4">
           Already have an account?{' '}
-          <a href="/login" className="text-blue-700 font-semibold hover:underline">
+          <a href="#" onClick={()=>{setShowRegister(false)} className="text-blue-700 font-semibold hover:underline">
             Login
           </a>
         </p>
