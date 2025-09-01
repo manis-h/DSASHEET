@@ -14,7 +14,7 @@ export default function Register({ setToken }) {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/auth/register', { email, password });
+      await axios.post('https://dsasheet-production.up.railway.app/api/auth/register', { email, password });
       const res = await axios.post('http://localhost:3000/api/auth/login', { email, password });
       setToken(res.data.token);
     } catch (err) {
