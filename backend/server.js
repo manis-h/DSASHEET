@@ -5,7 +5,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const dsaRoutes = require('./routes/dsa');
 const { seedData } = require('./seed');
-
+const mongolink = process.env.MONGO_URI
 const app = express();
 app.use(require('morgan')('dev'));
 app.use(cors(
@@ -17,7 +17,7 @@ app.use(cors(
 ));
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/dsa-sheet');
+mongoose.connect(mongolink);
 
 app.use('/api/auth', authRoutes);
 app.use('/api/dsa', dsaRoutes);
